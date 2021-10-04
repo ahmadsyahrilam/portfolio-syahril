@@ -16,11 +16,31 @@
         justify-content: space-between; //first element start at beginning, last element start last
 
         .left{
+            display: flex; //flex can align item horizontally
+            align-items: center;
+
             .logo{ //left side logo. eg: syahril.
                 font-size: 40px;
                 font-weight: 700;
                 text-decoration: none;
                 color: inherit; //inherit color from parent above. eg: color: $mainColor;
+                margin-right: 40px;
+            }
+
+            .itemContainer{ //align icons at same level
+                display: flex;
+                align-items: center;
+                margin-left: 30px;
+
+                .icon{
+                    font-size: 18px;
+                    margin-right: 5px;
+                }
+
+                span{
+                    font-size: 15px;
+                    font-weight: 400;
+                }
             }
         }
     }

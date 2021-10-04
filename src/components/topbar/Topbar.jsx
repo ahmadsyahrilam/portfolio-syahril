@@ -11,11 +11,12 @@ export default function Topbar() {
                     <a href="#intro" className="logo">syahril.</a>
                     <div className="itemContainer">
                         <Person className="icon"/>
-                        <span>8970 8689 707</span>
+                        <span>+60 11 2692 2538</span>
                     </div>
-                    <div className="itemContainer" className="icon">
-                        <Mail/>
-                        <span>syahril@mail.com</span>
+
+                    <div className="itemContainer">
+                        <Mail className="icon"/>
+                        <span>ahmadsyahrilam@mail.com</span>
                     </div>
                 </div>
                 
