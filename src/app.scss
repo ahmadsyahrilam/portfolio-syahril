@@ -6,7 +6,8 @@
         height: calc(100vh - 70px); //app height - topbar (70px)
         background-color: lightyellow;
         position: relative; //make section start after topbar (70px)
-        top: 70px;
+        top: 70px; //topbar
+        scroll-behavior: smooth; //smooth scroll
         scroll-snap-type: y mandatory; //snap at y-axis
         scrollbar-width: none; //scrollbar none for firefox
         &::-webkit-scrollbar{ //none for other browser. safari, crhome etc
