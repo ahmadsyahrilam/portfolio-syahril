@@ -8,6 +8,7 @@
     position: fixed;
     top: 0;
     z-index: 2; //if it bigger than other pages/compoenents, topbar is still fixed on top
+    transition: all 1s ease; //change color topbar smoother
 
     .wrapper{ //wrap inside topbar. eg: menu
         padding: 10px 30px;
@@ -39,7 +40,48 @@
 
                 span{
                     font-size: 15px;
-                    font-weight: 400;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .right{
+
+            .hamburger{
+                width: 32px;
+                height: 25px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                cursor: pointer;
+            }
+
+            span{
+                width: 100%;
+                height: 3px;
+                background-color: $mainColor;
+                transform-origin: left; //this is for line on right side topbar
+                transition: all 2s ease; //all transition (eg: opacity & transform) happen after 2s, timing ease
+            }
+        }
+    }
+
+    &.active{
+        background-color: $mainColor;
+        color: white;
+
+        .hamburger{
+            span{ //each span. eg: line
+                &:first-child{ //line 1
+                    background-color: white;
+                    transform: rotate(45deg); //rotate the line
+                }
+                &:nth-child(2){ //line 2 is seemless
+                    opacity: 0;
+                }
+                &:last-child{ //line 3
+                    background-color: white;
+                    transform: rotate(-45deg); //rotate the line
                 }
             }
         }

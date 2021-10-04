@@ -6,11 +6,17 @@ import Testimonials from "./components/testimonials/Testimonials"
 import Contact from "./components/contact/Contact"
 
 import "./app.scss"
+import {useState} from "react";
 
 function App() {
+
+  //set state for right side topbar
+  const[menuOpen, setMenuOpen] = useState(false)
+
+
   return (
     <div className="app">
-      <Topbar />
+      <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
       <div className="sections">
         <Intro />
         <Portfolio />
