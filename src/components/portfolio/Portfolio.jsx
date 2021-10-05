@@ -1,7 +1,10 @@
 import PortfolioList from "../portfolioList/PortfolioList";
 import "./portfolio.scss"
+import { useState } from "react";
 
 export default function Portfolio() {
+
+    const [selected,setSelected] = useState("featured") //to check which one of the menu is selected
 
     const list = [
         {
@@ -27,7 +30,12 @@ export default function Portfolio() {
                 <li>Web App</li>
                 <li>Mobile App</li> */}
                 {list.map(item => (
-                    <PortfolioList title={item.title}/>
+                    <PortfolioList 
+                        title={item.title} 
+                        active={selected === item.id} 
+                        setSelected={ setSelected }
+                        id={item.id}
+                    />
                 ))}
             </ul>
             <div className="container">
