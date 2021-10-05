@@ -1,3 +1,68 @@
 .intro{
-    background-color: lightpink;
+    background-color: white;
+    display: flex;
+
+    .left{
+        flex: 0.5;
+        // background-color: yellow; //check the flex area - left
+        overflow: hidden; //hide scrollbar
+
+        .imgContainer{
+            width: 700px;
+            height: 700px;
+            background-color: rgb(236, 213, 79);
+            border-radius: 50%; //make circle
+            display: flex;
+            align-items: flex-end; //align image to the end of container inside the circle
+            justify-content: center;
+            float: right;
+        }
+
+        img{
+            height: 90%;
+        }
+    }
+
+    .right{
+        flex: 0.5;
+        // background-color: blue; //check the flex area - right
+        position: relative;
+        
+        .wrapper{
+            width: 100%;
+            height: 100%;
+            padding-left: 50px;
+            display: flex; //to center item arrow
+            flex-direction: column; //flex will be vertical
+            justify-content: center;
+
+            h1{
+                font-size: 60px;
+                margin: 10px 0;
+            }
+            h2{
+                font-size: 35px;
+            }
+            h3{
+                font-size: 30px;
+            }
+        }
+
+        a{
+            position: absolute;
+            bottom: 10px; //arrow bottom
+            left: 40%; //arrow is centered
+
+            img{
+                width: 30px;
+                animation: arrowBlink 2s infinite; //give animation to image
+            }
+
+            @keyframes arrowBlink {
+                100%{ //after 2s (animation)
+                    opacity: 0;
+                }
+            }
+        }
+    }
 }
