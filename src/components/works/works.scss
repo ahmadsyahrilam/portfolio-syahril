@@ -1,3 +1,5 @@
+@import "../../global.scss";
+
 .works{
     background-color: rgb(255, 183, 75);
     display: flex;
@@ -9,6 +11,10 @@
         height: 50px;
         position: absolute;
         cursor: pointer;
+
+        @include mobile{ //hide the arrow
+            display: none;
+        }
 
         &.left{
             left: 100px;
@@ -27,6 +33,12 @@
         left: 0; //middle container will move to left if change the value
         transition: all 1s ease-out;
 
+        @include mobile{
+            height: 100vh; //cover whole screen in mobile view
+            flex-direction: column; //vertically
+            justify-content: center;
+        }
+
         .container{
             width: 100vw; //contain whole screen
             display: flex;
@@ -41,6 +53,12 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+
+                @include mobile{
+                    width: 90%;
+                    height: 180px;
+                    margin: 5px 0;
+                }
 
                 .left{
                     flex: 4;
