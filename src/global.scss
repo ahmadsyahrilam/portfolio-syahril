@@ -1,3 +1,11 @@
 //global scss
 
 $mainColor: #15023a;
+
+$width: 768px;
+
+@mixin mobile { //this will be use across the entire file scss. need to import to other file
+    @media (max-width: #{$width}){
+        @content
+    }
+}
