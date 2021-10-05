@@ -45,6 +45,24 @@
             }
             h3{
                 font-size: 30px;
+
+                span{
+                    font-size: inherit;
+                    color: rgb(202, 181, 63);
+                }
+
+                .ityped-cursor{
+                    animation: blink 1s infinite;
+                }
+
+                @keyframes blink {
+                    50%{
+                        opacity: 1;
+                    }
+                    100%{
+                        opacity: 0;
+                    }
+                }
             }
         }
 
@@ -55,7 +73,7 @@
 
             img{
                 width: 30px;
-                animation: arrowBlink 2s infinite; //give animation to image
+                animation: arrowBlink 2s infinite; //give animation to arrow down. infinite loop
             }
 
             @keyframes arrowBlink {
