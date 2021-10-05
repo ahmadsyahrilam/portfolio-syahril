@@ -7,7 +7,7 @@
     color: $mainColor;
     position: fixed;
     top: 0;
-    z-index: 2; //if it bigger than other pages/compoenents, topbar is still fixed on top
+    z-index: 3; //if it bigger than other pages/compoenents, topbar is still fixed on top
     transition: all 1s ease; //change color topbar smoother
 
     .wrapper{ //wrap inside topbar. eg: menu
